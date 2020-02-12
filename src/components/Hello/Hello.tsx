@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from "styled-components"
 
 import * as flickr from "../../flickr/FlickrFeed"
+import { TagsInput } from "../TagsInput/TagsInput"
 
 const Title = styled.h1`
   color: coral;
@@ -39,6 +40,7 @@ export const Hello: React.FC<HelloProps> = (props: HelloProps) => {
           ))}
         </ul>
       </div>
+      <TagsInput />
     </div>
   )
 }

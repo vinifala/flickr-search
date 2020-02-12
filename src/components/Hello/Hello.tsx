@@ -16,8 +16,8 @@ export interface HelloProps {
 
 export const Hello: React.FC<HelloProps> = (props: HelloProps) => {
   const [state, setState] = React.useState([])
-  const handleInput = (e: React.FormEvent<HTMLInputElement>): void => {
-    const tags = e.currentTarget.value?.split(",")
+  const handleInput = (tags: string[]): void => {
+    console.log("tags", tags)
     if (tags.length > 0) {
       flickr.doSearch(tags).then((data: flickr.FlickrFeed) => {
         setState(data.items)
@@ -31,7 +31,6 @@ export const Hello: React.FC<HelloProps> = (props: HelloProps) => {
         Hello from {props.compiler} and {props.framework}!
       </Title>
       <div>
-        <input type="text" onInput={handleInput} />
         <ul>
           {state.map((item: flickr.FlickrFeedItem, i: number) => (
             <li key={i}>
@@ -40,7 +39,7 @@ export const Hello: React.FC<HelloProps> = (props: HelloProps) => {
           ))}
         </ul>
       </div>
-      <TagsInput />
+      <TagsInput onChange={handleInput} />
     </div>
   )
 }

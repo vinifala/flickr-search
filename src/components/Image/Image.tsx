@@ -16,13 +16,13 @@ const Wrapper = styled.li`
   border-radius 4px;
   flex: 1;
   list-style: none;
-  padding: 16px;
   margin: 8px;
+  padding: 16px;
   text-align: center;
 `
 const TextContainer = styled.ul`
-  text-align: left;
   padding: 0;
+  text-align: left;
   li {
     list-style: none;
     margin: 8px 0;

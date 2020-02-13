@@ -9,8 +9,8 @@ const Wrapper = styled.div`
   flex-wrap: wrap;
   font-family: sans-serif;
   min-height: 48px;
-  width: 480px;
   padding: 0 8px;
+  width: 480px;
   &:focus-within {
     border: 1px solid #2c3b63;
   }
@@ -18,55 +18,55 @@ const Wrapper = styled.div`
 const TagsContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
   margin: 8px 0 0 0;
+  padding: 0;
 `
 const Tag = styled.li`
-  width: auto;
-  height: 32px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
-  padding: 0 8px;
-  font-size: 14px;
-  list-style: none;
-  border-radius: 6px;
-  margin: 0 8px 8px 0;
   background: #2c3b63;
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  font-size: 14px;
+  height: 32px;
+  justify-content: center;
+  list-style: none;
+  margin: 0 8px 8px 0;
+  padding: 0 8px;
+  width: auto;
 `
 const InputContainer = styled.div`
   flex: 1 1 240px;
 `
 const CloseIcon = styled.i`
-  font-style: normal;
-  cursor: pointer;
-  border-radius: 50%;
   background-color: #ece59a;
-  display: inline-block;
-  width: 21px;
-  height: 21px;
-  text-align: center;
-  vertical-align: middle;
-  transform: rotate(45deg);
-  font-size: 21px;
-  line-height: 21px;
-  padding: 0;
-  margin-left: 6px;
+  border-radius: 50%;
   color: #2c3b63;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-style: normal;
   font-weight: bold;
+  height: 21px;
+  line-height: 21px;
+  margin-left: 6px;
   opacity: 0.5;
+  padding: 0;
+  text-align: center;
+  transform: rotate(45deg);
   transition: ease-out opacity 0.2s;
+  vertical-align: middle;
+  width: 21px;
   &:hover {
     opacity: 1;
   }
 `
 const StyledInput = styled.input`
   border: none;
-  width: 100%;
-  height: 46px;
   font-size: 14px;
+  height: 46px;
   padding: 4px 0 0 0;
+  width: 100%;
   &:focus {
     outline: transparent;
   }

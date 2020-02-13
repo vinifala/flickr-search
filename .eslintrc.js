@@ -36,6 +36,7 @@ module.exports = {
     ],
   },
   rules: {
+    "@typescript-eslint/camelcase": "warn",
     "@typescript-eslint/member-delimiter-style": [
       "error",
       {

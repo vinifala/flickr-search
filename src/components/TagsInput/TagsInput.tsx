@@ -36,7 +36,7 @@ const Tag = styled.li`
   background: #2c3b63;
 `
 const InputContainer = styled.div`
-  flex: 1;
+  flex: 1 1 240px;
 `
 const CloseIcon = styled.i`
   font-style: normal;
@@ -80,14 +80,21 @@ export const TagsInput: React.FC<TagsInputProps> = props => {
   const [tags, setTags] = React.useState([])
 
   React.useEffect(() => {
-    console.log("tagsinput:", tags)
     props.onChange(tags)
   }, [tags])
+
+  const removeLastTag = (): void => setTags([...tags.slice(0, -1)])
 
   const addTags = (event: React.KeyboardEvent<HTMLInputElement>): void => {
     if (event.key === " " && event.currentTarget.value !== "") {
       setTags([...tags, event.currentTarget.value])
       event.currentTarget.value = ""
+    } else if (
+      event.key === "Backspace" &&
+      event.currentTarget.value === "" &&
+      tags.length > 0
+    ) {
+      removeLastTag()
     }
   }
 
@@ -113,7 +120,10 @@ export const TagsInput: React.FC<TagsInputProps> = props => {
         ))}
       </TagsContainer>
       <InputContainer>
-        <StyledInput onKeyUp={handleOnKeyUp} />
+        <StyledInput
+          placeholder="Tags are space separated"
+          onKeyUp={handleOnKeyUp}
+        />
       </InputContainer>
     </Wrapper>
   )

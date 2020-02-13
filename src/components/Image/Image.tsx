@@ -1,6 +1,5 @@
 import * as React from "react"
 import styled from "styled-components"
-import "jest-styled-components"
 
 export interface ImageProps {
   author: string

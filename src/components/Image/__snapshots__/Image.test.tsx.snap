@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image component With tags should match snapshot 1`] = `
+.c0 {
+  background-color: rgba(132,141,130,0.1);
+  border: 1px solid #848D82;
+  border-radius: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  list-style: none;
+  margin: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.c1 {
+  padding: 0;
+  text-align: left;
+}
+
+.c1 li {
+  list-style: none;
+  margin: 8px 0;
+}
+
+<li
+  className="c0"
+>
+  <a
+    href="https://www.flickr.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img
+      className=""
+      src="image.jpg"
+    />
+  </a>
+  <ul
+    className="c1"
+  >
+    <li>
+      Taken by 
+      Vini
+       on 
+      13/2/2020
+       
+      at 
+      12:34
+    </li>
+    <li>
+      Tags: 
+      badminton, basketball, ski
+    </li>
+  </ul>
+</li>
+`;
+
+exports[`Image component Without tags should match snapshot 1`] = `
+.c0 {
+  background-color: rgba(132,141,130,0.1);
+  border: 1px solid #848D82;
+  border-radius: 4px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  list-style: none;
+  margin: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.c1 {
+  padding: 0;
+  text-align: left;
+}
+
+.c1 li {
+  list-style: none;
+  margin: 8px 0;
+}
+
+<li
+  className="c0"
+>
+  <a
+    href="https://www.flickr.com"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <img
+      className=""
+      src="image.jpg"
+    />
+  </a>
+  <ul
+    className="c1"
+  >
+    <li>
+      Taken by 
+      Vini
+       on 
+      13/2/2020
+       
+      at 
+      12:34
+    </li>
+  </ul>
+</li>
+`;

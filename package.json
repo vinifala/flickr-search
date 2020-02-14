@@ -5,6 +5,8 @@
   "main": "index.ts",
   "scripts": {
     "build": "webpack --config webpack-prod.config.js",
+    "lint": "eslint .",
+    "prettier": "prettier --write \"**/*.{ts,js,tsx}\"",
     "start": "webpack-dev-server --open",
     "test": "jest"
   },

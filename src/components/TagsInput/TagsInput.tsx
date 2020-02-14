@@ -72,7 +72,7 @@ const StyledInput = styled.input`
   }
 `
 
-interface TagsInputProps {
+export interface TagsInputProps {
   onChange?: (tags: string[]) => void
 }
 
@@ -80,12 +80,14 @@ export const TagsInput: React.FC<TagsInputProps> = props => {
   const [tags, setTags] = React.useState([])
 
   React.useEffect(() => {
-    props.onChange(tags)
+    if (typeof props.onChange === "function") {
+      props.onChange(tags)
+    }
   }, [tags])
 
   const removeLastTag = (): void => setTags([...tags.slice(0, -1)])
 
-  const addTags = (event: React.KeyboardEvent<HTMLInputElement>): void => {
+  const updateTags = (event: React.KeyboardEvent<HTMLInputElement>): void => {
     if (event.key === " " && event.currentTarget.value !== "") {
       setTags([...tags, event.currentTarget.value])
       event.currentTarget.value = ""
@@ -104,7 +106,7 @@ export const TagsInput: React.FC<TagsInputProps> = props => {
   const handleOnKeyUp = (
     event: React.KeyboardEvent<HTMLInputElement>
   ): void => {
-    addTags(event)
+    updateTags(event)
   }
 
   const handleRemoveTag = (index: number) => (): void => removeTags(index)

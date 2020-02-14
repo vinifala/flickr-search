@@ -9,15 +9,12 @@ module.exports = {
     modules: ["src", "node_modules"],
     extensions: [".ts", ".tsx", ".js"],
   },
-  devServer: {
-    contentBase: "./dist",
-  },
 
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./templates/index.ejs",
-      title: "Development",
+      title: "Flickr public feed search",
     }),
   ],
 

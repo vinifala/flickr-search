@@ -19,7 +19,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./templates/index.ejs",
-      title: "Development",
+      title: "Flickr public feed search",
     }),
   ],
 

@@ -24,10 +24,7 @@ export interface FlickrFeed {
 }
 
 const prepareTags = (tags: string[]): string =>
-  tags
-    .map((s: string): string => encodeURIComponent(s))
-    .join(",")
-    .replace(/ /g, "-")
+  tags.map((s: string): string => encodeURIComponent(s)).join(",")
 
 export function doSearch(
   tags: string[],
